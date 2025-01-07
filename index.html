@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conversor de Monedas</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <div class="converter">
-      <h1>Conversor de Monedas</h1>
+      <h1>Conversor de Moneda Nacional</h1>
+      <h2 id="fuente"></h2>
       <form id="currency-form">
         <div class="input-group">
           <label for="amount">Cantidad:</label>
@@ -38,23 +39,9 @@
         </div>
         <button type="submit">Convertir</button>
       </form>
-      <div id="result"></div>
+      <div id="changer" class="result"></div>
+      <div id="result" class="result"></div>
     </div>
-    <script>
-      document
-        .getElementById("currency-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const amount = document.getElementById("amount").value;
-          const fromCurrency = document.getElementById("from-currency").value;
-          const toCurrency = document.getElementById("to-currency").value;
-          // Aquí iría la lógica real de conversión, posiblemente utilizando una API
-          // Por ahora, usaremos una conversión ficticia
-          const convertedAmount = (amount * 0.85).toFixed(2);
-          document.getElementById(
-            "result"
-          ).textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
-        });
-    </script>
+    <script src="./assets/js/main.js" ;></script>
   </body>
 </html>
